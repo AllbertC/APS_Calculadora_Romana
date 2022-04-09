@@ -3,82 +3,51 @@
 <head>
     <meta charset="utf-8" />
     <title>Calculadora Romana </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <h1>Calculadora Romana </h1>
+    <div id="container">
 
-    Primeiro Número<br />
-    <input id="n1" type="string"/><br/>
-    <br/>
-    Segundo Número<br />
-    <input id="n2" type="string"/><br/>
-    <br/>
-    <button onclick="somar()">Somar</button>
-    <button onclick="multiplicar()">Multiplicar</button>
-    <button onclick="dividir()">Dividir</button>
-    <button onclick="subtrair()">Subtrair</button>
-    <br /><br />
-     O Resultado é <span></span>
+        <div id="titulo"><h1 >Calculadora <wbr/>Romana </h1></div>
 
-    <script>
-        var n1 = document.querySelector('#n1')
-        var n2 = document.querySelector('#n2')
-        var resultado = document.querySelector('span')
+        <div id="calculadora">
+
+                <div class="entrada">   
+                    <div>
+                    <input id="n1" placeholder="Valor 1" type="text">            
+                    
+                    <input id="n2" placeholder="Valor 2" type="string"/>
+                    </div>
+                </div>
+
+                <div id="operacoes">
+                    <div>
+                        <div>
+                            <tr class="l1">
+                                <td><button onclick="somar()">+</button></td>
+                                <td><button onclick="multiplicar()">x</button></td>
+                            </tr>
+                        </div>
+                        <div>
+                            <tr class="l2">    
+                                <td><button onclick="dividir()">/</button></td>
+                                <td><button onclick="subtrair()">-</button></td>
+                        </div>
+                    </div>
+                    </tr>
+                </div>
+
+            <p id="resultado">O Resultado é:</p> <span></span>
+        </div> 
+    </div>
+
+
+
         
-        if (n1 !== "" && n2 !== "")
-        function somar() {
-            resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)
-           
-        }
-         function dividir() {
-            resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
-        }
-         function multiplicar() {
-            resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
-        }
-         function subtrair() {
-            resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
-        }
-        else {
-            resultado.Context = "Preencha todos os campos";
-        }
 
 
 
-      /*   function convertToRoman(num){
-	var romanToNum = {
-		M: 1000,
-		CM: 900,
-		D: 500,
-		CD: 400,
-		C: 100,
-		XC: 90,
-		L: 50,
-		XL: 40,
-		X: 10,
-		IX: 9,
-		V: 5,
-		IV: 4,
-		I: 1
-	};
-
-	var roman = "";
-
-	for (var key in romanToNum) {
-		
-		while (num>= romanToNum[key]){
-			roman += key;
-			num -= romanToNum[key];
-		}
-		
-	}
-
-	return roman;
-}
-
-convertToRoman(8);*/
-
-    </script>
 
     
    
